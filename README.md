@@ -1,1 +1,1 @@
-# infotecs_autotesting
+# Тестовое задание Автотестирование (JavaScript) Infotecs
