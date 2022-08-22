@@ -55,7 +55,7 @@ test('search with lowercase', async ({ page }) => {
     await expect(page.locator("text=You Don't Know JS")).toBeVisible();
   });
 
-test('enter ', async ({ page }) => {
+test('enter part of title', async ({ page }) => {
 
     await page.goto('https://demoqa.com/books');
   
