@@ -1,23 +1,10 @@
 const { test, expect } = require('@playwright/test');
 
-let options = {
-  root: document.querySelector('#scrollArea'),
-  rootMargin: '0px',
-  threshold: 1.0
-}
-
-let observer = new IntersectionObserver(callback, options);
-
-
-let target = document.querySelector('.-next');
-
-
-
 test('button next visible', async ({ page }) => {
   
   await page.goto('https://demoqa.com/books');
 
-  await expect(page.locator(".-next").evaluate(observer.observe(target))).toBeVisible();
+  await expect(page.locator(".-next")).toBeVisible();
 });
 
 test("should change to next page when 'Next' button is clicked", async ({ page }) => {
